@@ -1,5 +1,4 @@
-package my.rest;
+package my.rest.model;
 
 public class Employee {
-
 }
