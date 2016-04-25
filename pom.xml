@@ -14,16 +14,27 @@
     <packaging>war</packaging>
     <name>My Sample REST Webapp</name>
     <url>http://maven.apache.org</url>
+
+    <properties>
+        <jersey.version>2.22.2</jersey.version>
+        <jetty.version>9.3.8.RC0</jetty.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-server</artifactId>
-            <version>2.22.2</version>
+            <version>${jersey.version}</version>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
-            <version>2.22.2</version>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>${jersey.version}</version>
         </dependency>
         <dependency>
             <groupId>io.swagger</groupId>
@@ -33,7 +44,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlets</artifactId>
-            <version>9.3.8.RC0</version>
+            <version>${jetty.version}</version>
         </dependency>
 
         <dependency>
@@ -49,7 +60,7 @@
                 <plugin>
                     <groupId>org.eclipse.jetty</groupId>
                     <artifactId>jetty-maven-plugin</artifactId>
-                    <version>9.3.8.RC0</version>
+                    <version>${jetty.version}</version>
                     <configuration>
                         <scanIntervalSeconds>10</scanIntervalSeconds>
                         <webApp>
